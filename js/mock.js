@@ -332,7 +332,7 @@
 
     var ERROR_MODE = 0, SUCCESS_MODE = 1;
 
-    var mode = ERROR_MODE;
+    var mode = SUCCESS_MODE;
 
     var toggleMode = function() {
         if (mode === SUCCESS_MODE) {
@@ -353,7 +353,7 @@
         };
     };
 
-    toggleMode(); // kick off the initial state (SUCCESS)
+    setup(200); // kick off the initial state (SUCCESS)
 
     return {
         toggleMode: toggleMode,
