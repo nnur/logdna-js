@@ -80,6 +80,7 @@ function main() {
     },
 
     onDeleteHosts(event, { hostsToDelete }) {
+      if (!hostsToDelete.length) { return; }
       const ids = hostsToDelete.map(host => host.id);
       const errors = [];
       deleteHosts(ids).then(results => {
